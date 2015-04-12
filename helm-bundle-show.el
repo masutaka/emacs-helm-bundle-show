@@ -1,8 +1,5 @@
 ;;; helm-bundle-show.el --- bundle show with helm interface
 
-;;; Commentary:
-;; 
-
 ;; Copyright (C) 2015 by Takashi Masuda
 
 ;; Author: Takashi Masuda <masutaka.net@gmail.com>
@@ -22,6 +19,9 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+;; helm-bundle-show.el provides a helm interface to "bundle show".
 
 ;;; Code:
 
