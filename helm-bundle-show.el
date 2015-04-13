@@ -25,6 +25,13 @@
 
 ;;; Code:
 
+(defmacro helm-bundle-show--line-string ()
+  `(buffer-substring-no-properties
+    (line-beginning-position) (line-end-position)))
+
+(defmacro helm-bundle-show--gem-string ()
+  `(nth 1 (split-string (helm-bundle-show--line-string))))
+
 (defun helm-bundle-show--list-candidates ()
   (with-temp-buffer
     (unless (zerop (call-process "bundle" nil t nil "show"))
@@ -37,13 +44,6 @@
           (push gem gems))
         (forward-line 1))
       (reverse gems))))
-
-(defmacro helm-bundle-show--gem-string ()
-  `(nth 1 (split-string (helm-bundle-show--line-string))))
-
-(defmacro helm-bundle-show--line-string ()
-  `(buffer-substring-no-properties
-    (line-beginning-position) (line-end-position)))
 
 (defvar helm-bundle-show--action
   '(("Open Directory" . helm-bundle-show--find-file)
