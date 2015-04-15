@@ -25,6 +25,8 @@
 
 ;;; Code:
 
+(require 'helm)
+
 (defmacro helm-bundle-show--line-string ()
   `(buffer-substring-no-properties
     (line-beginning-position) (line-end-position)))
