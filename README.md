@@ -4,9 +4,13 @@
 
 `helm-bundle-show.el` provides interfaces of `$ bundle show` with helm.
 
-## Screenshot
+## Demo
+
+You can open the gem directory from the results.
 
 ![helm-bundle-show](image/helm-bundle-show.gif)
+
+Also you can choose some actions with `<TAB>` key.
 
 ![helm-bundle-show2](image/helm-bundle-show2.gif)
 
@@ -24,9 +28,9 @@ You can install `helm-bundle-show.el` from [MELPA](https://github.com/milkypostm
 
 ### `helm-bundle-show`
 
-* Execute with `$ bundle show | awk 'NR>1 {print $2}'`.
-* You can select a directory from the results.
-* Also you can choose the following actions with <TAB> key.
+* Execute `$ bundle show`.
+* You can open the gem directory from the results.
+* Also you can choose the following actions with `<TAB>` key.
     * Open Directory (default)
     * Open Directory other window
     * Open Directory other frame
