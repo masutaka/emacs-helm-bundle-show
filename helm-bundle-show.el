@@ -1,4 +1,4 @@
-;;; helm-bundle-show.el --- bundle show with helm interface
+;;; helm-bundle-show.el --- bundle show with helm interface -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2015 by Takashi Masuda
 
