@@ -50,7 +50,8 @@
 (defvar helm-bundle-show--action
   '(("Open Directory" . helm-bundle-show--find-file)
     ("Open Directory other window" . helm-bundle-show--find-file-other-window)
-    ("Open Directory other frame" . helm-bundle-show--find-file-other-frame)))
+    ("Open Directory other frame" . helm-bundle-show--find-file-other-frame)
+    ("Browse RubyGems url" . helm-bundle-show--browse-rubygems-url)))
 
 (defun helm-bundle-show--find-file (gem)
   (find-file (helm-bundle-show--full-path gem)))
@@ -60,6 +61,9 @@
 
 (defun helm-bundle-show--find-file-other-frame (gem)
   (find-file-other-frame (helm-bundle-show--full-path gem)))
+
+(defun helm-bundle-show--browse-rubygems-url (gem)
+  (browse-url (concat "https://rubygems.org/gems/" gem)))
 
 (defun helm-bundle-show--full-path (gem)
   (with-temp-buffer
