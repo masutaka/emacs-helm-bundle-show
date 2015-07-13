@@ -24,6 +24,12 @@ You can install `helm-bundle-show.el` from [MELPA](https://github.com/milkypostm
 
 * Execute with `$ bundle show | awk 'NR>1 {print $2}'`.
 * You can select a directory from the results.
+* Also you can choose the following actions with <TAB> key.
+    * Open Directory (default)
+    * Open Directory other window
+    * Open Directory other frame
+    * Browse RubyGems url (ex. https://rubygems.org/gems/rails)
+    * Copy RubyGems url
 
 ### `helm-for-files`
 
