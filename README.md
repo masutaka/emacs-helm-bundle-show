@@ -8,6 +8,8 @@
 
 ![helm-bundle-show](image/helm-bundle-show.gif)
 
+![helm-bundle-show2](image/helm-bundle-show2.gif)
+
 ## Requirements
 
 * Emacs 24 or higher
