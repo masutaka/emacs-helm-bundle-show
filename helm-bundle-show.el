@@ -64,10 +64,10 @@
   (find-file-other-frame (helm-bundle-show--full-path gem)))
 
 (defun helm-bundle-show--browse-rubygems-url (gem)
-  (browse-url (concat "https://rubygems.org/gems/" gem)))
+  (browse-url (helm-bundle-show--rubygems-url gem)))
 
 (defun helm-bundle-show--copy-rubygems-url (gem)
-  (let ((url (concat "https://rubygems.org/gems/" gem)))
+  (let ((url (helm-bundle-show--rubygems-url gem)))
     (kill-new url)
     (message url)))
 
@@ -77,6 +77,9 @@
       (error (format "Failed: bundle show %s" gem)))
     (goto-char (point-min))
     (helm-bundle-show--line-string)))
+
+(defun helm-bundle-show--rubygems-url (gem)
+  (concat "https://rubygems.org/gems/" gem))
 
 (defvar helm-bundle-show--source
   `((name . "bundle show")
