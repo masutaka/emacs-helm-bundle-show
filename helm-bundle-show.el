@@ -86,7 +86,6 @@
     (candidates . helm-bundle-show--list-candidates)
     (keymap . ,helm-generic-files-map)
     (help-message . helm-generic-file-help-message)
-    (mode-line . helm-generic-file-mode-line-string)
     (action . ,helm-bundle-show--action))
   "Helm source for bundle show.")
 
