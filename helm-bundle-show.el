@@ -27,6 +27,17 @@
 
 (require 'helm)
 
+(defgroup helm-bundle-show nil
+  "bundle show with helm interface"
+  :prefix "helm-bundle-show-"
+  :group 'helm)
+
+(defcustom helm-bundle-show-command-bundle
+  "bundle"
+  "*A bundle command"
+  :type 'string
+  :group 'helm-bundle-show)
+
 (defmacro helm-bundle-show--line-string ()
   `(buffer-substring-no-properties
     (line-beginning-position) (line-end-position)))
@@ -36,7 +47,9 @@
 
 (defun helm-bundle-show--list-candidates ()
   (with-temp-buffer
-    (unless (zerop (call-process "bundle" nil t nil "show"))
+    (unless (zerop (apply #'call-process
+			  helm-bundle-show-command-bundle nil t nil
+			  "show"))
       (error "Failed: bundle show'"))
     (let ((gems))
       (goto-char (point-min))
@@ -73,7 +86,9 @@
 
 (defun helm-bundle-show--full-path (gem)
   (with-temp-buffer
-    (unless (zerop (call-process "bundle" nil t nil "show" gem))
+    (unless (zerop (apply #'call-process
+			  helm-bundle-show-command-bundle nil t nil
+			  "show" gem))
       (error (format "Failed: bundle show %s" gem)))
     (goto-char (point-min))
     (helm-bundle-show--line-string)))
