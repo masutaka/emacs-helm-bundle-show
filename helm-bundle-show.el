@@ -26,6 +26,7 @@
 ;;; Code:
 
 (require 'helm)
+(require 'helm-files)
 
 (defgroup helm-bundle-show nil
   "bundle show with helm interface"
