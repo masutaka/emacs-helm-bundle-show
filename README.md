@@ -16,9 +16,9 @@ Also you can choose some actions with `<TAB>` key.
 
 ## Requirements
 
-* Emacs 24.3 or higher
-* helm 1.7.6 or higher
-* bundler
+* Emacs 24.5 or higher
+* helm 1.8.0 or higher
+* bundler 1.11.2 or higher
 
 ## Installation
 
