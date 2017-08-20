@@ -1,4 +1,12 @@
-# helm-bundle-show.el [![melpa badge][melpa-badge]][melpa-link] [![melpa stable badge][melpa-stable-badge]][melpa-stable-link]
+# helm-bundle-show.el
+
+[![melpa badge][melpa-badge]][melpa-link]
+[![melpa stable badge][melpa-stable-badge]][melpa-stable-link]
+
+[melpa-link]: https://melpa.org/#/helm-bundle-show
+[melpa-stable-link]: https://stable.melpa.org/#/helm-bundle-show
+[melpa-badge]: https://melpa.org/packages/helm-bundle-show-badge.svg
+[melpa-stable-badge]: https://stable.melpa.org/packages/helm-bundle-show-badge.svg
 
 ## Introduction
 
@@ -22,7 +30,7 @@ Also you can choose some actions with `<TAB>` key.
 
 ## Installation
 
-You can install `helm-bundle-show.el` from [MELPA](https://github.com/milkypostman/melpa.git) with package.el (`M-x package-install helm-bundle-show`).
+You can install `helm-bundle-show.el` from [MELPA](https://melpa.org) with package.el (`M-x package-install helm-bundle-show`).
 
 ## Usage
 
@@ -44,8 +52,3 @@ Require the following configuration.
 ```lisp
 (add-to-list 'helm-for-files-preferred-list 'helm-bundle-show--source)
 ```
-
-[melpa-link]: http://melpa.org/#/helm-bundle-show
-[melpa-stable-link]: http://stable.melpa.org/#/helm-bundle-show
-[melpa-badge]: http://melpa.org/packages/helm-bundle-show-badge.svg
-[melpa-stable-badge]: http://stable.melpa.org/packages/helm-bundle-show-badge.svg
