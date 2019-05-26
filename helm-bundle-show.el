@@ -4,7 +4,7 @@
 
 ;; Author: Takashi Masuda <masutaka.net@gmail.com>
 ;; URL: https://github.com/masutaka/emacs-helm-bundle-show
-;; Version: 1.1.5
+;; Version: 1.1.6
 ;; Package-Requires: ((emacs "24") (helm "1.8.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
